@@ -1,0 +1,564 @@
+{% load static %}<html><head><link rel=stylesheet href='{% static 'test.css' %}'></head><body><div class="question" data-questionid="231767" id="question">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="vote">
+<input name="_id_" type="hidden" value="231767"/>
+<a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+<span class="vote-count-post high-scored-post" itemprop="upvoteCount">8314</span>
+<a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+<a class="star-off" href="#">favorite</a>
+<div class="favoritecount"><b>4963</b></div>
+</div>
+</div>
+<div class="postcell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>What is the use of the <code>yield</code> keyword in Python? What does it do?</p>
+<p>For example, I'm trying to understand this code<sup><strong>1</strong></sup>:</p>
+<pre><code>def _get_child_candidates(self, distance, min_dist, max_dist):
+    if self._leftchild and distance - max_dist &lt; self._median:
+        yield self._leftchild
+    if self._rightchild and distance + max_dist &gt;= self._median:
+        yield self._rightchild  
+</code></pre>
+<p>And this is the caller:</p>
+<pre><code>result, candidates = [], [self]
+while candidates:
+    node = candidates.pop()
+    distance = node._get_dist(obj)
+    if distance &lt;= max_dist and distance &gt;= min_dist:
+        result.extend(node._values)
+    candidates.extend(node._get_child_candidates(distance, min_dist, max_dist))
+return result
+</code></pre>
+<p>What happens when the method <code>_get_child_candidates</code> is called?
+Is a list returned? A single element? Is it called again? When will subsequent calls stop?</p>
+<hr/>
+<p><sub>
+1. The code comes from Jochen Schulz (jrschulz), who made a great Python library for metric spaces. This is the link to the complete source: <a href="http://well-adjusted.de/~jrschulz/mspace/" rel="noreferrer">Module mspace</a>.</sub></p>
+</div>
+<div class="post-taglist">
+<a class="post-tag" href="/questions/tagged/python" rel="tag" title="show questions tagged 'python'">python</a> <a class="post-tag" href="/questions/tagged/iterator" rel="tag" title="show questions tagged 'iterator'">iterator</a> <a class="post-tag" href="/questions/tagged/generator" rel="tag" title="show questions tagged 'generator'">generator</a> <a class="post-tag" href="/questions/tagged/yield" rel="tag" title="show questions tagged 'yield'">yield</a> <a class="post-tag" href="/questions/tagged/coroutine" rel="tag" title="show questions tagged 'coroutine'">coroutine</a>
+</div>
+<div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+<div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a class="short-link" href="/q/231767" id="link-post-231767" title="short permalink to this question">share</a><span class="lsep">|</span><a class="suggest-edit-post" href="/posts/231767/edit" title="">improve this question</a></div>
+</div>
+<div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+<div class="user-action-time">
+<a href="/posts/231767/revisions" title="show all edits to this post">edited <span class="relativetime" title="2017-12-14 19:21:52Z">Dec 14 '17 at 19:21</span></a>
+</div>
+<div class="user-gravatar32">
+<a href="/users/5952681/linusg"><div class="gravatar-wrapper-32"><img alt="" height="32" src="https://www.gravatar.com/avatar/cd1d7051c326321b5ebb368d725dfe02?s=32&amp;d=identicon&amp;r=PG" width="32"/></div></a>
+</div>
+<div class="user-details">
+<a href="/users/5952681/linusg">linusg</a>
+<div class="-flair">
+<span class="reputation-score" dir="ltr" title="reputation score ">3,684</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="15 silver badges"><span class="badge2"></span><span class="badgecount">15</span></span><span title="40 bronze badges"><span class="badge3"></span><span class="badgecount">40</span></span>
+</div>
+</div>
+</div> </div>
+<div class="post-signature owner grid--cell fl0">
+<div class="user-info ">
+<div class="user-action-time">
+        asked <span class="relativetime" title="2008-10-23 22:21:11Z">Oct 23 '08 at 22:21</span>
+</div>
+<div class="user-gravatar32">
+<a href="/users/18300/alex-s"><div class="gravatar-wrapper-32"><img alt="" height="32" src="https://i.stack.imgur.com/jcyI4.jpg?s=32&amp;g=1" width="32"/></div></a>
+</div>
+<div class="user-details">
+<a href="/users/18300/alex-s">Alex. S.</a>
+<div class="-flair">
+<span class="reputation-score" dir="ltr" title="reputation score 48,082">48.1k</span><span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span><span title="44 silver badges"><span class="badge2"></span><span class="badgecount">44</span></span><span title="57 bronze badges"><span class="badge3"></span><span class="badgecount">57</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="post-layout--right">
+<div class="comments js-comments-container dno" id="comments-231767">
+<ul class="comments-list js-comments-list" data-addlink-disabled="true" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-remaining-comments-count="0">
+</ul>
+</div>
+<div data-anon="true" data-rep="50" id="comments-link-231767">
+<a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno"> | </span>
+<a class="js-show-link comments-link dno" href="#" onclick="" title="expand to show all comments on this post"></a>
+</div>
+</div> </div>
+</div>
+<div class="answer accepted-answer" data-answerid="231855" id="answer-231855" itemprop="acceptedAnswer" itemscope="" itemtype="http://schema.org/Answer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="vote">
+<input name="_id_" type="hidden" value="231855"/>
+<a class="vote-up-off" title="This answer is useful">up vote</a>
+<span class="vote-count-post high-scored-post" itemprop="upvoteCount">12177</span>
+<a class="vote-down-off" title="This answer is not useful">down vote</a>
+<span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+<div class="bounty-award-container"><span class="bounty-award" title="This answer has been awarded bounties worth 550 reputation by alecxe and ytpillai">+550</span></div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>To understand what <code>yield</code> does, you must understand what <em>generators</em> are. And before generators come <em>iterables</em>.</p>
+<h2>Iterables</h2>
+<p>When you create a list, you can read its items one by one. Reading its items one by one is called iteration:</p>
+<pre><code>&gt;&gt;&gt; mylist = [1, 2, 3]
+&gt;&gt;&gt; for i in mylist:
+...    print(i)
+1
+2
+3
+</code></pre>
+<p><code>mylist</code> is an <em>iterable</em>. When you use a list comprehension, you create a list, and so an iterable:</p>
+<pre><code>&gt;&gt;&gt; mylist = [x*x for x in range(3)]
+&gt;&gt;&gt; for i in mylist:
+...    print(i)
+0
+1
+4
+</code></pre>
+<p>Everything you can use "<code>for... in...</code>" on is an iterable; <code>lists</code>, <code>strings</code>, files...</p>
+<p>These iterables are handy because you can read them as much as you wish, but you store all the values in memory and this is not always what you want when you have a lot of values.</p>
+<h2>Generators</h2>
+<p>Generators are iterators, a kind of iterable <strong>you can only iterate over once</strong>. Generators do not store all the values in memory, <strong>they generate the values on the fly</strong>:</p>
+<pre><code>&gt;&gt;&gt; mygenerator = (x*x for x in range(3))
+&gt;&gt;&gt; for i in mygenerator:
+...    print(i)
+0
+1
+4
+</code></pre>
+<p>It is just the same except you used <code>()</code> instead of <code>[]</code>. BUT, you <strong>cannot</strong> perform <code>for i in mygenerator</code> a second time since generators can only be used once: they calculate 0, then forget about it and calculate 1, and end calculating 4, one by one.</p>
+<h2>Yield</h2>
+<p><code>yield</code> is a keyword that is used like <code>return</code>, except the function will return a generator.</p>
+<pre><code>&gt;&gt;&gt; def createGenerator():
+...    mylist = range(3)
+...    for i in mylist:
+...        yield i*i
+...
+&gt;&gt;&gt; mygenerator = createGenerator() # create a generator
+&gt;&gt;&gt; print(mygenerator) # mygenerator is an object!
+&lt;generator object createGenerator at 0xb7555c34&gt;
+&gt;&gt;&gt; for i in mygenerator:
+...     print(i)
+0
+1
+4
+</code></pre>
+<p>Here it's a useless example, but it's handy when you know your function will return a huge set of values that you will only need to read once.</p>
+<p>To master <code>yield</code>, you must understand that <strong>when you call the function, the code you have written in the function body does not run.</strong> The function only returns the generator object, this is a bit tricky :-)</p>
+<p>Then, your code will be run each time the <code>for</code> uses the generator.</p>
+<p>Now the hard part:</p>
+<p>The first time the <code>for</code> calls the generator object created from your function, it will run the code in your function from the beginning until it hits <code>yield</code>, then it'll return the first value of the loop. Then, each other call will run the loop you have written in the function one more time, and return the next value, until there is no value to return.</p>
+<p>The generator is considered empty once the function runs, but does not hit <code>yield</code> anymore. It can be because the loop had come to an end, or because you do not satisfy an <code>"if/else"</code> anymore.</p>
+<hr/>
+<h2>Your code explained</h2>
+<p>Generator:</p>
+<pre><code># Here you create the method of the node object that will return the generator
+def _get_child_candidates(self, distance, min_dist, max_dist):
+
+    # Here is the code that will be called each time you use the generator object:
+
+    # If there is still a child of the node object on its left
+    # AND if distance is ok, return the next child
+    if self._leftchild and distance - max_dist &lt; self._median:
+        yield self._leftchild
+
+    # If there is still a child of the node object on its right
+    # AND if distance is ok, return the next child
+    if self._rightchild and distance + max_dist &gt;= self._median:
+        yield self._rightchild
+
+    # If the function arrives here, the generator will be considered empty
+    # there is no more than two values: the left and the right children
+</code></pre>
+<p>Caller:</p>
+<pre><code># Create an empty list and a list with the current object reference
+result, candidates = list(), [self]
+
+# Loop on candidates (they contain only one element at the beginning)
+while candidates:
+
+    # Get the last candidate and remove it from the list
+    node = candidates.pop()
+
+    # Get the distance between obj and the candidate
+    distance = node._get_dist(obj)
+
+    # If distance is ok, then you can fill the result
+    if distance &lt;= max_dist and distance &gt;= min_dist:
+        result.extend(node._values)
+
+    # Add the children of the candidate in the candidates list
+    # so the loop will keep running until it will have looked
+    # at all the children of the children of the children, etc. of the candidate
+    candidates.extend(node._get_child_candidates(distance, min_dist, max_dist))
+
+return result
+</code></pre>
+<p>This code contains several smart parts:</p>
+<ul>
+<li><p>The loop iterates on a list, but the list expands while the loop is being iterated :-) It's a concise way to go through all these nested data even if it's a bit dangerous since you can end up with an infinite loop. In this case, <code>candidates.extend(node._get_child_candidates(distance, min_dist, max_dist))</code> exhausts all the values of the generator, but <code>while</code> keeps creating new generator objects which will produce different values from the previous ones since it's not applied on the same node.</p></li>
+<li><p>The <code>extend()</code> method is a list object method that expects an iterable and adds its values to the list.</p></li>
+</ul>
+<p>Usually we pass a list to it:</p>
+<pre><code>&gt;&gt;&gt; a = [1, 2]
+&gt;&gt;&gt; b = [3, 4]
+&gt;&gt;&gt; a.extend(b)
+&gt;&gt;&gt; print(a)
+[1, 2, 3, 4]
+</code></pre>
+<p>But in your code it gets a generator, which is good because:</p>
+<ol>
+<li>You don't need to read the values twice.</li>
+<li>You may have a lot of children and you don't want them all stored in memory.</li>
+</ol>
+<p>And it works because Python does not care if the argument of a method is a list or not. Python expects iterables so it will work with strings, lists, tuples and generators! This is called duck typing and is one of the reason why Python is so cool. But this is another story, for another question...</p>
+<p>You can stop here, or read a little bit to see an advanced use of a generator:</p>
+<h2>Controlling a generator exhaustion</h2>
+<pre><code>&gt;&gt;&gt; class Bank(): # Let's create a bank, building ATMs
+...    crisis = False
+...    def create_atm(self):
+...        while not self.crisis:
+...            yield "$100"
+&gt;&gt;&gt; hsbc = Bank() # When everything's ok the ATM gives you as much as you want
+&gt;&gt;&gt; corner_street_atm = hsbc.create_atm()
+&gt;&gt;&gt; print(corner_street_atm.next())
+$100
+&gt;&gt;&gt; print(corner_street_atm.next())
+$100
+&gt;&gt;&gt; print([corner_street_atm.next() for cash in range(5)])
+['$100', '$100', '$100', '$100', '$100']
+&gt;&gt;&gt; hsbc.crisis = True # Crisis is coming, no more money!
+&gt;&gt;&gt; print(corner_street_atm.next())
+&lt;type 'exceptions.StopIteration'&gt;
+&gt;&gt;&gt; wall_street_atm = hsbc.create_atm() # It's even true for new ATMs
+&gt;&gt;&gt; print(wall_street_atm.next())
+&lt;type 'exceptions.StopIteration'&gt;
+&gt;&gt;&gt; hsbc.crisis = False # The trouble is, even post-crisis the ATM remains empty
+&gt;&gt;&gt; print(corner_street_atm.next())
+&lt;type 'exceptions.StopIteration'&gt;
+&gt;&gt;&gt; brand_new_atm = hsbc.create_atm() # Build a new one to get back in business
+&gt;&gt;&gt; for cash in brand_new_atm:
+...    print cash
+$100
+$100
+$100
+$100
+$100
+$100
+$100
+$100
+$100
+...
+</code></pre>
+<p><strong>Note:</strong> For Python 3, use<code>print(corner_street_atm.__next__())</code> or <code>print(next(corner_street_atm))</code></p>
+<p>It can be useful for various things like controlling access to a resource.</p>
+<h2>Itertools, your best friend</h2>
+<p>The itertools module contains special functions to manipulate iterables. Ever wish to duplicate a generator?
+Chain two generators? Group values in a nested list with a one-liner? <code>Map / Zip</code> without creating another list?</p>
+<p>Then just <code>import itertools</code>.</p>
+<p>An example? Let's see the possible orders of arrival for a four-horse race:</p>
+<pre><code>&gt;&gt;&gt; horses = [1, 2, 3, 4]
+&gt;&gt;&gt; races = itertools.permutations(horses)
+&gt;&gt;&gt; print(races)
+&lt;itertools.permutations object at 0xb754f1dc&gt;
+&gt;&gt;&gt; print(list(itertools.permutations(horses)))
+[(1, 2, 3, 4),
+ (1, 2, 4, 3),
+ (1, 3, 2, 4),
+ (1, 3, 4, 2),
+ (1, 4, 2, 3),
+ (1, 4, 3, 2),
+ (2, 1, 3, 4),
+ (2, 1, 4, 3),
+ (2, 3, 1, 4),
+ (2, 3, 4, 1),
+ (2, 4, 1, 3),
+ (2, 4, 3, 1),
+ (3, 1, 2, 4),
+ (3, 1, 4, 2),
+ (3, 2, 1, 4),
+ (3, 2, 4, 1),
+ (3, 4, 1, 2),
+ (3, 4, 2, 1),
+ (4, 1, 2, 3),
+ (4, 1, 3, 2),
+ (4, 2, 1, 3),
+ (4, 2, 3, 1),
+ (4, 3, 1, 2),
+ (4, 3, 2, 1)]
+</code></pre>
+<h2>Understanding the inner mechanisms of iteration</h2>
+<p>Iteration is a process implying iterables (implementing the <code>__iter__()</code> method) and iterators (implementing the <code>__next__()</code> method).
+Iterables are any objects you can get an iterator from. Iterators are objects that let you iterate on iterables.</p>
+<p>There is more about it in this article about <a href="http://effbot.org/zone/python-for-statement.htm" rel="noreferrer">how <code>for</code> loops work</a>.</p>
+</div>
+<div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+<div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a class="short-link" href="/a/231855" id="link-post-231855" title="short permalink to this answer">share</a><span class="lsep">|</span><a class="suggest-edit-post" href="/posts/231855/edit" title="">improve this answer</a></div> </div>
+<div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+<div class="user-action-time">
+<a href="/posts/231855/revisions" title="show all edits to this post">edited <span class="relativetime" title="2018-05-20 09:49:28Z">May 20 at 9:49</span></a>
+</div>
+<div class="user-gravatar32">
+<a href="/users/63550/peter-mortensen"><div class="gravatar-wrapper-32"><img alt="" height="32" src="https://i.stack.imgur.com/RIZKi.png?s=32&amp;g=1" width="32"/></div></a>
+</div>
+<div class="user-details">
+<a href="/users/63550/peter-mortensen">Peter Mortensen</a>
+<div class="-flair">
+<span class="reputation-score" dir="ltr" title="reputation score 12,804">12.8k</span><span title="19 gold badges"><span class="badge1"></span><span class="badgecount">19</span></span><span title="83 silver badges"><span class="badge2"></span><span class="badgecount">83</span></span><span title="111 bronze badges"><span class="badge3"></span><span class="badgecount">111</span></span>
+</div>
+</div>
+</div> </div>
+<div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+<div class="user-action-time">
+        answered <span class="relativetime" title="2008-10-23 22:48:44Z">Oct 23 '08 at 22:48</span>
+</div>
+<div class="user-gravatar32">
+<a href="/users/9951/e-satis"><div class="gravatar-wrapper-32"><img alt="" height="32" src="https://www.gravatar.com/avatar/1449ec95d8c114dbca53136cc8194b61?s=32&amp;d=identicon&amp;r=PG&amp;f=1" width="32"/></div></a>
+</div>
+<div class="user-details">
+<a href="/users/9951/e-satis">e-satis</a>
+<div class="-flair">
+<span class="reputation-score" dir="ltr" title="reputation score 335,358">335k</span><span title="96 gold badges"><span class="badge1"></span><span class="badgecount">96</span></span><span title="260 silver badges"><span class="badge2"></span><span class="badgecount">260</span></span><span title="305 bronze badges"><span class="badge3"></span><span class="badgecount">305</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="post-layout--right">
+<div class="comments js-comments-container " id="comments-231855">
+<ul class="comments-list js-comments-list" data-addlink-disabled="true" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-remaining-comments-count="3">
+<li class="comment js-comment " data-comment-id="45956083" id="comment-45956083">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+<span class="supernova" title="number of 'useful comment' votes received">75</span>
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body d-block">
+<span class="comment-copy"><b>All</b> iterators can only be iterated over once, not just those produced by generator functions.  If you don't believe me, call <code>iter()</code> on any iterable object and try to iterate over the result more than once.</span>
+                    – <a class="comment-user" href="/users/2572431/augurar" title="4,926 reputation">augurar</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2015-03-03 22:54:31Z">Mar 3 '15 at 22:54</span></span>
+</div>
+</div>
+</li>
+<li class="comment js-comment " data-comment-id="52268168" id="comment-52268168">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+<span class="hot" title="number of 'useful comment' votes received">18</span>
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body d-block">
+<span class="comment-copy">@Craicerjack You have your terms mixed up.  An iterable is something with an <code>__iter__</code> method.  An iterator is the result of calling <code>iter()</code> on an iterable.  Iterators can only be iterated over once.</span>
+                    – <a class="comment-user" href="/users/2572431/augurar" title="4,926 reputation">augurar</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2015-08-24 20:52:18Z">Aug 24 '15 at 20:52</span></span>
+</div>
+</div>
+</li>
+<li class="comment js-comment " data-comment-id="75308701" id="comment-75308701">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+<span class="supernova" title="number of 'useful comment' votes received">129</span>
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body d-block">
+<span class="comment-copy"><code>yield</code> is not as magical this answer suggests. When you call a function that contains a <code>yield</code> statement anywhere, you get a generator object, but no code runs. Then each time you extract an object from the generator, Python executes code in the function until it comes to a <code>yield</code> statement, then pauses and delivers the object. When you extract another object, Python resumes just after the <code>yield</code> and continues until it reaches another <code>yield</code> (often the same one, but one iteration later). This continues until the function runs off the end, at which point the generator is deemed exhausted.</span>
+                    – <a class="comment-user" href="/users/3830997/matthias-fripp" title="5,457 reputation">Matthias Fripp</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2017-05-23 21:41:53Z">May 23 '17 at 21:41</span></span>
+</div>
+</div>
+</li>
+<li class="comment js-comment " data-comment-id="78845401" id="comment-78845401">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+<span class="supernova" title="number of 'useful comment' votes received">50</span>
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body d-block">
+<span class="comment-copy">@MatthiasFripp has pointed out exactly what made me stumble reading this answer.  "your code will be run each time" is a misleading statement.  "Your code will continue from where it left off" is a more accurate way to phrase it.</span>
+                    – <a class="comment-user" href="/users/693542/indigenuity" title="4,248 reputation">Indigenuity</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2017-08-29 15:58:49Z">Aug 29 '17 at 15:58</span></span>
+</div>
+</div>
+</li>
+<li class="comment js-comment " data-comment-id="84633217" id="comment-84633217">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+<span class="cool" title="number of 'useful comment' votes received">1</span>
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body d-block">
+<span class="comment-copy">"These iterables are handy... but you store all the values in memory and this is not always what you want", is either wrong or confusing. An iterable returns an iterator upon calling the iter() on the iterable, and an iterator doesn't always have to store its values in memory, depending on the implementation of the <b>iter</b> method, it can also generate values in the sequence on demand.</span>
+                    – <a class="comment-user" href="/users/557022/picmate-%e6%b6%85" title="1,593 reputation">picmate 涅</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2018-02-15 19:21:11Z">Feb 15 at 19:21</span></span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div data-anon="true" data-rep="50" id="comments-link-231855">
+<a class="js-add-link comments-link dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno"> | </span>
+<a class="js-show-link comments-link " href="#" onclick="" title="expand to show all comments on this post">show <b>3</b> more comments</a>
+</div>
+</div> </div>
+</div>
+<div class="answer" data-answerid="237028" id="answer-237028" itemscope="" itemtype="http://schema.org/Answer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="vote">
+<input name="_id_" type="hidden" value="237028"/>
+<a class="vote-up-off" title="This answer is useful">up vote</a>
+<span class="vote-count-post high-scored-post" itemprop="upvoteCount">1636</span>
+<a class="vote-down-off" title="This answer is not useful">down vote</a>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<h2>Shortcut to <a href="http://en.wikipedia.org/wiki/Grok" rel="noreferrer">Grokking</a> <code>yield</code></h2>
+<p>When you see a function with <code>yield</code> statements, apply this easy trick to understand what will happen:</p>
+<ol>
+<li>Insert a line <code>result = []</code> at the start of the function.</li>
+<li>Replace each <code>yield expr</code> with <code>result.append(expr)</code>.</li>
+<li>Insert a line <code>return result</code> at the bottom of the function.</li>
+<li>Yay - no more <code>yield</code> statements! Read and figure out code.</li>
+<li>Compare function to original definition.</li>
+</ol>
+<p>This trick may give you an idea of the logic behind the function, but what actually happens with <code>yield</code> is significantly different that what happens in the list based approach. In many cases the yield approach will be a lot more memory efficient and faster too. In other cases this trick will get you stuck in an infinite loop, even though the original function works just fine. Read on to learn more...</p>
+<h2>Don't confuse your Iterables, Iterators and Generators</h2>
+<p>First, the <strong>iterator protocol</strong> - when you write</p>
+<pre><code>for x in mylist:
+    ...loop body...
+</code></pre>
+<p>Python performs the following two steps:</p>
+<ol>
+<li><p>Gets an iterator for <code>mylist</code>:</p>
+<p>Call <code>iter(mylist)</code> -&gt; this returns an object with a <code>next()</code> method (or <code>__next__()</code> in Python 3).</p>
+<p>[This is the step most people forget to tell you about]</p></li>
+<li><p>Uses the iterator to loop over items:</p>
+<p>Keep calling the <code>next()</code> method on the iterator returned from step 1. The return value from <code>next()</code> is assigned to <code>x</code> and the loop body is executed. If an exception <code>StopIteration</code> is raised from within <code>next()</code>, it means there are no more values in the iterator and the loop is exited.</p></li>
+</ol>
+<p>The truth is Python performs the above two steps anytime it wants to <em>loop over</em> the contents of an object - so it could be a for loop, but it could also be code like <code>otherlist.extend(mylist)</code> (where <code>otherlist</code> is a Python list).</p>
+<p>Here <code>mylist</code> is an <em>iterable</em> because it implements the iterator protocol. In a user defined class, you can implement the <code>__iter__()</code> method to make instances of your class iterable. This method should return an <em>iterator</em>. An iterator is an object with a <code>next()</code> method. It is possible to implement both <code>__iter__()</code> and <code>next()</code> on the same class, and have <code>__iter__()</code> return <code>self</code>. This will work for simple cases, but not when you want two iterators looping over the same object at the same time.</p>
+<p>So that's the iterator protocol, many objects implement this protocol:</p>
+<ol>
+<li>Built-in lists, dictionaries, tuples, sets, files.</li>
+<li>User defined classes that implement <code>__iter__()</code>.</li>
+<li>Generators.</li>
+</ol>
+<p>Note that a <code>for</code> loop doesn't know what kind of object it's dealing with - it just follows the iterator protocol, and is happy to get item after item as it calls <code>next()</code>. Built-in lists return their items one by one, dictionaries return the <em>keys</em> one by one, files return the <em>lines</em> one by one, etc. And generators return... well that's where <code>yield</code> comes in:</p>
+<pre><code>def f123():
+    yield 1
+    yield 2
+    yield 3
+
+for item in f123():
+    print item
+</code></pre>
+<p>Instead of <code>yield</code> statements, if you had three <code>return</code> statements in <code>f123()</code> only the first would get executed, and the function would exit. But <code>f123()</code> is no ordinary function. When <code>f123()</code> is called, it <em>does not</em> return any of the values in the yield statements! It returns a generator object. Also, the function does not really exit - it goes into a suspended state. When the <code>for</code> loop tries to loop over the generator object, the function resumes from its suspended state at the very next line after the <code>yield</code> it previously returned from, executes the next line of code, in this case a <code>yield</code> statement, and returns that as the next item. This happens until the function exits, at which point the generator raises <code>StopIteration</code>, and the loop exits. </p>
+<p>So the generator object is sort of like an adapter - at one end it exhibits the iterator protocol, by exposing <code>__iter__()</code> and <code>next()</code> methods to keep the <code>for</code> loop happy. At the other end however, it runs the function just enough to get the next value out of it, and puts it back in suspended mode.</p>
+<h2>Why Use Generators?</h2>
+<p>Usually you can write code that doesn't use generators but implements the same logic. One option is to use the temporary list 'trick' I mentioned before. That will not work in all cases, for e.g. if you have infinite loops, or it may make inefficient use of memory when you have a really long list. The other approach is to implement a new iterable class <code>SomethingIter</code> that keeps state in instance members and performs the next logical step in it's <code>next()</code> (or <code>__next__()</code> in Python 3) method. Depending on the logic, the code inside the <code>next()</code> method may end up looking very complex and be prone to bugs. Here generators provide a clean and easy solution.</p>
+</div>
+<div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+<div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a class="short-link" href="/a/237028" id="link-post-237028" title="short permalink to this answer">share</a><span class="lsep">|</span><a class="suggest-edit-post" href="/posts/237028/edit" title="">improve this answer</a></div> </div>
+<div class="post-signature grid--cell fl0">
+<div class="user-info ">
+<div class="user-action-time">
+<a href="/posts/237028/revisions" title="show all edits to this post">edited <span class="relativetime" title="2016-08-15 21:29:29Z">Aug 15 '16 at 21:29</span></a>
+</div>
+<div class="user-gravatar32">
+<a href="/users/2319588/cameron-gagnon"><div class="gravatar-wrapper-32"><img alt="" height="32" src="https://i.stack.imgur.com/lTFLE.jpg?s=32&amp;g=1" width="32"/></div></a>
+</div>
+<div class="user-details">
+<a href="/users/2319588/cameron-gagnon">Cameron Gagnon</a>
+<div class="-flair">
+<span class="reputation-score" dir="ltr" title="reputation score ">906</span><span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
+</div>
+</div>
+</div> </div>
+<div class="post-signature grid--cell fl0">
+<div class="user-info ">
+<div class="user-action-time">
+        answered <span class="relativetime" title="2008-10-25 21:22:30Z">Oct 25 '08 at 21:22</span>
+</div>
+<div class="user-gravatar32">
+<a href="/users/28409/user28409"><div class="gravatar-wrapper-32"><img alt="" height="32" src="https://www.gravatar.com/avatar/?s=32&amp;d=identicon&amp;r=PG" width="32"/></div></a>
+</div>
+<div class="user-details">
+<a href="/users/28409/user28409">user28409</a>
+<div class="-flair">
+<span class="reputation-score" dir="ltr" title="reputation score 22,410">22.4k</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="post-layout--right">
+<div class="comments js-comments-container " id="comments-237028">
+<ul class="comments-list js-comments-list" data-addlink-disabled="true" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-remaining-comments-count="0">
+<li class="comment js-comment " data-comment-id="76206780" id="comment-76206780">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+<span class="cool" title="number of 'useful comment' votes received">2</span>
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body d-block">
+<span class="comment-copy"><i>"When you see a function with yield statements, apply this easy trick to understand what will happen"</i> Doesn't this completely ignore the fact that you can <code>send</code> into a generator, which is a huge part of the point of generators?</span>
+                    – <a class="comment-user" href="/users/2665591/danielsank" title="1,573 reputation">DanielSank</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2017-06-17 22:41:34Z">Jun 17 '17 at 22:41</span></span>
+</div>
+</div>
+</li>
+<li class="comment js-comment " data-comment-id="79407236" id="comment-79407236">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+<span class="cool" title="number of 'useful comment' votes received">1</span>
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body d-block">
+<span class="comment-copy">"it could be a for loop, but it could also be code like <code>otherlist.extend(mylist)</code>" -&gt; This is incorrect. <code>extend()</code> modifies the list in-place and does not return an iterable. Trying to loop over <code>otherlist.extend(mylist)</code> will fail with a <code>TypeError</code> because <code>extend()</code> implicitly returns <code>None</code>, and you can't loop over <code>None</code>.</span>
+                    – <a class="comment-user" href="/users/406776/pedro" title="245 reputation">Pedro</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2017-09-14 14:48:17Z">Sep 14 '17 at 14:48</span></span>
+<span title="this comment was edited 2 times">
+<svg aria-hidden="true" class="svg-icon va-text-bottom o50 iconPencilSm" height="15" viewbox="0 0 14 15" width="14"><path d="M8.37 4.7L2 11.11V13h1.88l6.37-6.43zM12.23 3.83L11.1 2.71a.5.5 0 0 0-.7 0L9.2 3.86l1.88 1.84 1.14-1.16a.5.5 0 0 0 0-.71z"></path></svg>
+</span>
+</div>
+</div>
+</li>
+<li class="comment js-comment " data-comment-id="82933650" id="comment-82933650">
+<div class="js-comment-actions comment-actions">
+<div class="comment-score">
+</div>
+</div>
+<div class="comment-text js-comment-text-and-form">
+<div class="comment-body d-block">
+<span class="comment-copy">@pedro You have misunderstood that sentence. It means that python performs the two mentioned steps on <code>mylist</code> (not on <code>otherlist</code>) when executing <code>otherlist.extend(mylist)</code>.</span>
+                    – <a class="comment-user" href="/users/2099607/today" title="1,994 reputation">today</a>
+<span class="comment-date" dir="ltr"><span class="relativetime-clean" title="2017-12-26 18:53:57Z">Dec 26 '17 at 18:53</span></span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div data-anon="true" data-rep="50" id="comments-link-237028">
+<a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno"> | </span>
+<a class="js-show-link comments-link dno" href="#" onclick="" title="expand to show all comments on this post"></a>
+</div>
+</div> </div>
+</div>
+</body></html>
